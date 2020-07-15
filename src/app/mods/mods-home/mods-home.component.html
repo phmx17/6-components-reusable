@@ -1,0 +1,14 @@
+<app-divider>Modal Window</app-divider>
+<button (click)="onClick()" >Show Modal</button>
+
+<app-modal (close)="onClick()" *ngIf="showModal"> <!-- close is an event emitted from child -->
+<div modalTitle>I am a reusable title</div>
+<p>I am reusable modal window content</p>
+<!-- add custom close button -->
+<ng-container modalFooter>
+  <button class="ui button" (click)="onClick()">Close Me</button> <!-- onClick() gets passed and triggered in child template -->
+</ng-container>
+</app-modal> 
+
+<app-divider>Accordion Component</app-divider>
+<app-accordion [items]="items"></app-accordion>

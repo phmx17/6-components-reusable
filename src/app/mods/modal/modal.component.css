@@ -1,0 +1,9 @@
+.actions:empty {    /* if div actions has no child elements, turn off */
+  display: none;
+}
+.actions-default {  /* have the modal close button off by default */
+  display: none;
+}
+.actions:empty + .actions-default { /* if coder does not send custom close button AND there is a sibling of actions-default the display it as block */
+  display: block;
+}
